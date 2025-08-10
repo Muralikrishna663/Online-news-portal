@@ -1,0 +1,93 @@
+/* styles.css - custom theme + magazine styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --brand-1: #0052D4;
+  --brand-2: #4364F7;
+  --accent: #6FB1FC;
+  --muted: #6c757d;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f5f7fb;
+  color:#212529;
+  margin:0;
+}
+
+.navbar{
+  background: linear-gradient(90deg,var(--brand-1),var(--brand-2),var(--accent));
+  box-shadow: 0 4px 20px rgba(12,24,48,0.08);
+}
+
+.navbar .nav-link{ color: rgba(255,255,255,0.95) !important; margin-left:12px; font-weight:600; }
+.navbar .navbar-brand{ font-weight:700; font-size:1.15rem; color:#fff !important; }
+
+.container{ max-width:1100px; }
+
+.featured-article img{
+  border-radius:12px;
+  object-fit:cover;
+  width:100%;
+  height:330px;
+}
+
+.card.custom-card{
+  border-radius:12px;
+  overflow:hidden;
+  border:0;
+  transition: transform .22s ease, box-shadow .22s ease;
+  background:linear-gradient(180deg, #fff, #fbfdff);
+}
+
+.card.custom-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(21,36,75,0.12);
+}
+
+.card-img-top{
+  height:180px;
+  object-fit:cover;
+}
+
+.category-badge{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:.8rem;
+  color:#fff;
+  background:var(--brand-1);
+  font-weight:600;
+}
+
+.read-more-btn{
+  transition: transform .16s ease, background-color .16s ease;
+}
+
+.read-more-btn:hover{
+  transform: scale(1.03);
+}
+
+footer{
+  background: linear-gradient(90deg,var(--brand-1),var(--brand-2),var(--accent));
+  color: #fff;
+  padding:18px 0;
+  margin-top:40px;
+  text-align:center;
+}
+
+/* Admin layout */
+.form-card{
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(12,24,48,0.06);
+  padding:18px;
+}
+
+.table thead th{ background: #f1f6ff; font-weight:600; }
+
+/* responsive tweaks */
+@media (max-width:767px){
+  .featured-article img { height:220px; }
+  .card-img-top { height:140px; }
+}
